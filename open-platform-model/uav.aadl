@@ -1,0 +1,14 @@
+package uav
+public
+	with SW;
+
+	system MissionComputer
+
+	end MissionComputer;
+
+	system implementation MissionComputer.impl
+		subcomponents
+			SW: system SW::Software.impl;
+	end MissionComputer.impl;
+	
+end uav;

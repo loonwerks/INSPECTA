@@ -1,0 +1,107 @@
+package SW
+public
+	
+	thread EthernetDriver
+		
+	end EthernetDriver;
+	
+	thread implementation EthernetDriver.Impl
+		
+	end EthernetDriver.Impl;
+	
+	process EthernetDriver_seL4
+		
+	end EthernetDriver_seL4;
+	
+	process implementation EthernetDriver_seL4.Impl
+		subcomponents
+			EthernetDriver: thread EthernetDriver.Impl;
+	end EthernetDriver_seL4.Impl;
+	
+	
+	thread NetworkServer
+		
+	end NetworkServer;
+	
+	thread implementation NetworkServer.Impl
+		
+	end NetworkServer.Impl;
+	
+	process NetworkServer_seL4
+		
+	end NetworkServer_seL4;
+
+	process implementation NetworkServer_seL4.Impl
+		subcomponents
+			NetworkServer: thread NetworkServer.Impl;
+	end NetworkServer_seL4.Impl;
+	
+
+	thread VirtioNetBackend
+		
+	end VirtioNetBackend;
+	
+	thread implementation VirtioNetBackend.Impl
+		
+	end VirtioNetBackend.Impl;
+	
+	process VirtioNetBackend_seL4
+		
+	end VirtioNetBackend_seL4;
+	
+	process implementation VirtioNetBackend_seL4.Impl
+		subcomponents
+			VirtioNetBackend: thread VirtioNetBackend.Impl;
+	end VirtioNetBackend_seL4.Impl;
+	
+	
+	thread VMM
+		
+	end VMM;
+	
+	thread implementation VMM.Impl
+		
+	end VMM.Impl;
+	
+	process VMM_seL4
+		
+	end VMM_seL4;
+	
+	process implementation VMM_seL4.Impl
+		subcomponents
+			VMM: thread VMM.Impl;
+	end VMM_seL4.Impl;	
+	
+	
+	thread MissionManager
+		
+	end MissionManager;
+	
+	thread implementation MissionManager.Impl
+		
+	end MissionManager.Impl;
+	
+	process MissionManager_seL4
+		
+	end MissionManager_seL4;
+	
+	process implementation MissionManager_seL4.Impl
+		subcomponents
+			MissionManager: thread MissionManager.Impl;
+	end MissionManager_seL4.Impl;
+	
+	
+	system software
+		
+	end software;
+	
+	system implementation software.impl
+		subcomponents
+			MissionManager: process MissionManager_seL4.Impl;
+			VMM: process VMM_seL4.impl;
+			VirtioNetBackend: process VirtioNetBackend_seL4.impl;
+			NetworkServer: process NetworkServer_seL4.impl;
+			EthernetDriver: process EthernetDriver_seL4.impl;
+		
+	end software.impl;
+end SW;
