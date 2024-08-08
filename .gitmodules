@@ -1,6 +1,6 @@
 [submodule "sysmlv2-agree/src/syside-for-agree"]
 	path = sysmlv2-agree/src/syside-for-agree
-	url = https://github.com/bathompson/syside-for-agree.git
+	url = https://github.com/loonwerks/syside-for-agree.git
 [submodule "sysmlv2-agree/src/aadl-sysmlv2-annex"]
 	path = sysmlv2-agree/src/aadl-sysmlv2-annex
-	url = https://github.com/bathompson/aadl-sysmlv2-annex.git
+	url = https://github.com/loonwerks/aadl-sysmlv2-annex.git
