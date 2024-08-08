@@ -26,7 +26,7 @@
 4. Paste `https://osate-build.sei.cmu.edu/download/osate/stable/2.14.0/updates` into the Work with box, hit enter, then select "OSATE2 for AADL2" and "Uncategorized". Procede with the installation process, and make sure to trust everything.
 5. Click on Window > Preferences and in the Preferences window, select Plug-in Development > Target Platform. Switch to the Running Platform option. Click Apply & close
     - **_NOTE:_** I tried adding these plugins to the Target Platform for SysMLv2, but it did not work.
-6. Go to File > Import and choose to import a project from Git. Select "Clone from URI". In the URI box, enter `https://github.com/bathompson/aadl-sysmlv2-annex.git`. Click through to the end of the prompts, leaving everything as default.
+6. Go to File > Import and choose to import a project from Git. Select "Clone from URI". In the URI box, enter `https://github.com/loonwerks/aadl-sysmlv2-annex.git`. Click through to the end of the prompts, leaving everything as default.
 7. Find the org.osate.sysml.importer project in the project viewer, right click it, and select export
 8. In the export menu, select "Runnable JAR file"
 9. In the export dialog:
